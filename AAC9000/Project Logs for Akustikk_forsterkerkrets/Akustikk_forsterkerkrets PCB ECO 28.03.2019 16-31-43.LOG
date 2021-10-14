@@ -1,0 +1,60 @@
+Added Component: Designator=U1(SOIC127P600X175-8N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.digikey.com/en/supplier-centers/o/on-semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "ww.onsemi.com/pub/Collateral/LM2594-D.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Iout,max"; Value = "500mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "LM2674MX-12/NOPB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOIC-8 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "SOIC127P600X175-8N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/LM2674MX-12/NOPB/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "LM2594DADJR2GOSCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vin,max"; Value = "40V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vin,min"; Value = "4.5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vout,max"; Value = "37V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vout,min"; Value = "1.23V"; VariantName = "[No Variations]"
+Added Component: Designator=U2(SOIC127P600X175-8N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.digikey.com/en/supplier-centers/o/on-semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "ww.onsemi.com/pub/Collateral/LM2594-D.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Iout,max"; Value = "500mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "LM2674MX-12/NOPB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOIC-8 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "SOIC127P600X175-8N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/LM2674MX-12/NOPB/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "LM2594DADJR2GOSCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vin,max"; Value = "40V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vin,min"; Value = "4.5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vout,max"; Value = "37V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vout,min"; Value = "1.23V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=GND Pin=U1-3
+Added Pin To Net: NetName=NetC4_2 Pin=U1-4
+Added Pin To Net: NetName=-12VDC Pin=U1-5
+Added Pin To Net: NetName=-12VDC Pin=U1-6
+Added Pin To Net: NetName=Vbat+ Pin=U1-7
+Added Pin To Net: NetName=NetD3_1 Pin=U1-8
+Added Pin To Net: NetName=GND Pin=U2-1
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=GND Pin=U2-3
+Added Pin To Net: NetName=NetC9_1 Pin=U2-4
+Added Pin To Net: NetName=GND Pin=U2-5
+Added Pin To Net: NetName=GND Pin=U2-6
+Added Pin To Net: NetName=Vbat+ Pin=U2-7
+Added Pin To Net: NetName=NetD6_1 Pin=U2-8
+Added Member To Class: ClassName=Akustikk_forsterkerkrets Member=Component U1 SOIC127P600X175-8N
+Added Member To Class: ClassName=Akustikk_forsterkerkrets Member=Component U2 SOIC127P600X175-8N

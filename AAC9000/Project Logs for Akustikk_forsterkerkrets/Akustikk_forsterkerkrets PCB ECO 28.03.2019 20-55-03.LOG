@@ -1,0 +1,13 @@
+Change Component Designator: OldDesignator=J1 NewDesignator=P1
+Change Component Designator: OldDesignator=J2 NewDesignator=P3
+Change Component Designator: OldDesignator=J3 NewDesignator=P4
+Change Component Designator: OldDesignator=J4 NewDesignator=P9
+Change Net Name : Old Net Name=NetJ1_2 New Net Name=NetP1_2
+Change Net Name : Old Net Name=NetJ2_2 New Net Name=NetP3_2
+Change Net Name : Old Net Name=NetJ3_2 New Net Name=NetP4_2
+Change Net Name : Old Net Name=NetJ4_2 New Net Name=NetP9_2
+Added Member To Class: ClassName=Akustikk_forsterkerkrets Member=Component P1 Valg av forstekning
+Added Member To Class: ClassName=Akustikk_forsterkerkrets Member=Component P3 Valg av forstekning
+Added Member To Class: ClassName=Akustikk_forsterkerkrets Member=Component P4 Valg av forstekning
+Added Member To Class: ClassName=Akustikk_forsterkerkrets Member=Component P9 Valg av forstekning
+Added Room: Name=Akustikk_forsterkerkrets
