@@ -1,0 +1,22 @@
+Change Component Footprint: Designator=R1 Old Footprint=POT MODEL91A New Footprint=POT Panasonic EVM
+Change Component Comment : Designator=R1 Old Comment=8.9K New Comment=8.9 K
+Change Component Designator: OldDesignator=HES NewDesignator=hall effect sensor1
+Change component parameters: Designator = "R1"; Footprint = "POT Panasonic EVM"; UniqueID = "\ODVQKDAP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Adjustment Type"; Value = "Top Adjustment"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://media.digikey.com/pdf/Data%20Sheets/Panasonic%20Resistors%20Thermistors%20PDFs/EVM-3Y_S_R_Rev2010.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Digi-Key Listing"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.digikey.ca/product-detail/en/EVM-3YSX50B14/P3Y103TR-ND/259773"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Panasonic Electronic Components"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number Of Turns"; Value = "Single"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartId"; Value = "7172"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "EVM-3YSX50B14"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PowerRating"; Value = "0.15W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "0,2543"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "P3Y103TR-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "TemperatureCoefficient"; Value = "250ppm/C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "25%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"

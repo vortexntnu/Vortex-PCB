@@ -1,0 +1,189 @@
+Added Component: Designator=J1(LPH_VERT.RECEPT._ASSY_4PX24S)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.molex.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.molex.com/pdm_docs/sd/461144241_sd.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Positions"; Value = "28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "0461144241"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "WM9739-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J2(LPH_VERT.RECEPT._ASSY_4PX24S)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.molex.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.molex.com/pdm_docs/sd/461144241_sd.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Positions"; Value = "28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "0461144241"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "WM9739-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J3(Header 14x2 RA)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.3m.com/3M/en_US/interconnect-us/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://multimedia.3m.com/mws/media/43897O/3mtmpinstriphdr-100-100x-100-929-series-ts0769.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Positions"; Value = "28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "929745-01-14-I"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "3M156384-28-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J4(Header 14x2 RA)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.3m.com/3M/en_US/interconnect-us/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://multimedia.3m.com/mws/media/43897O/3mtmpinstriphdr-100-100x-100-929-series-ts0769.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Positions"; Value = "28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "929745-01-14-I"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "3M156384-28-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SDA1 Pin=J1-1
+Added Pin To Net: NetName=SCL1 Pin=J1-2
+Added Pin To Net: NetName=SDA2 Pin=J1-3
+Added Pin To Net: NetName=SCL2 Pin=J1-4
+Added Pin To Net: NetName=THR0 Pin=J1-5
+Added Pin To Net: NetName=THR1 Pin=J1-6
+Added Pin To Net: NetName=THR2 Pin=J1-7
+Added Pin To Net: NetName=THR3 Pin=J1-8
+Added Pin To Net: NetName=THR4 Pin=J1-9
+Added Pin To Net: NetName=THR5 Pin=J1-10
+Added Pin To Net: NetName=THR6 Pin=J1-11
+Added Pin To Net: NetName=THR7 Pin=J1-12
+Added Pin To Net: NetName=PWM8 Pin=J1-13
+Added Pin To Net: NetName=PWM9 Pin=J1-14
+Added Pin To Net: NetName=Rx1 Pin=J1-15
+Added Pin To Net: NetName=Tx1 Pin=J1-16
+Added Pin To Net: NetName=Rx2 Pin=J1-17
+Added Pin To Net: NetName=Tx2 Pin=J1-18
+Added Pin To Net: NetName=GPIO0 Pin=J1-19
+Added Pin To Net: NetName=GPIO1 Pin=J1-20
+Added Pin To Net: NetName=GPIO2 Pin=J1-21
+Added Pin To Net: NetName=GPIO3 Pin=J1-22
+Added Pin To Net: NetName=GPIO4 Pin=J1-23
+Added Pin To Net: NetName=GPIO5 Pin=J1-24
+Added Pin To Net: NetName=12V Pin=J1-P1A
+Added Pin To Net: NetName=12V Pin=J1-P1A
+Added Pin To Net: NetName=12V Pin=J1-P1A
+Added Pin To Net: NetName=12V Pin=J1-P1A
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=5V Pin=J1-P2A
+Added Pin To Net: NetName=5V Pin=J1-P2A
+Added Pin To Net: NetName=5V Pin=J1-P2A
+Added Pin To Net: NetName=5V Pin=J1-P2A
+Added Pin To Net: NetName=3V3 Pin=J1-P2B
+Added Pin To Net: NetName=3V3 Pin=J1-P2B
+Added Pin To Net: NetName=3V3 Pin=J1-P2B
+Added Pin To Net: NetName=3V3 Pin=J1-P2B
+Added Pin To Net: NetName=SDA1 Pin=J2-1
+Added Pin To Net: NetName=SCL1 Pin=J2-2
+Added Pin To Net: NetName=SDA2 Pin=J2-3
+Added Pin To Net: NetName=SCL2 Pin=J2-4
+Added Pin To Net: NetName=THR0 Pin=J2-5
+Added Pin To Net: NetName=THR1 Pin=J2-6
+Added Pin To Net: NetName=THR2 Pin=J2-7
+Added Pin To Net: NetName=THR3 Pin=J2-8
+Added Pin To Net: NetName=THR4 Pin=J2-9
+Added Pin To Net: NetName=THR5 Pin=J2-10
+Added Pin To Net: NetName=THR6 Pin=J2-11
+Added Pin To Net: NetName=THR7 Pin=J2-12
+Added Pin To Net: NetName=PWM8 Pin=J2-13
+Added Pin To Net: NetName=PWM9 Pin=J2-14
+Added Pin To Net: NetName=Rx1 Pin=J2-15
+Added Pin To Net: NetName=Tx1 Pin=J2-16
+Added Pin To Net: NetName=Rx2 Pin=J2-17
+Added Pin To Net: NetName=Tx2 Pin=J2-18
+Added Pin To Net: NetName=GPIO0 Pin=J2-19
+Added Pin To Net: NetName=GPIO1 Pin=J2-20
+Added Pin To Net: NetName=GPIO2 Pin=J2-21
+Added Pin To Net: NetName=GPIO3 Pin=J2-22
+Added Pin To Net: NetName=GPIO4 Pin=J2-23
+Added Pin To Net: NetName=GPIO5 Pin=J2-24
+Added Pin To Net: NetName=12V Pin=J2-P1A
+Added Pin To Net: NetName=12V Pin=J2-P1A
+Added Pin To Net: NetName=12V Pin=J2-P1A
+Added Pin To Net: NetName=12V Pin=J2-P1A
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=5V Pin=J2-P2A
+Added Pin To Net: NetName=5V Pin=J2-P2A
+Added Pin To Net: NetName=5V Pin=J2-P2A
+Added Pin To Net: NetName=5V Pin=J2-P2A
+Added Pin To Net: NetName=3V3 Pin=J2-P2B
+Added Pin To Net: NetName=3V3 Pin=J2-P2B
+Added Pin To Net: NetName=3V3 Pin=J2-P2B
+Added Pin To Net: NetName=3V3 Pin=J2-P2B
+Added Pin To Net: NetName=+12V Pin=J3-1
+Added Pin To Net: NetName=GND Pin=J3-2
+Added Pin To Net: NetName=SDA1 Pin=J3-3
+Added Pin To Net: NetName=SCL1 Pin=J3-4
+Added Pin To Net: NetName=SDA2 Pin=J3-5
+Added Pin To Net: NetName=SCL2 Pin=J3-6
+Added Pin To Net: NetName=THR0 Pin=J3-7
+Added Pin To Net: NetName=THR1 Pin=J3-8
+Added Pin To Net: NetName=THR2 Pin=J3-9
+Added Pin To Net: NetName=THR3 Pin=J3-10
+Added Pin To Net: NetName=THR4 Pin=J3-11
+Added Pin To Net: NetName=THR5 Pin=J3-12
+Added Pin To Net: NetName=THR6 Pin=J3-13
+Added Pin To Net: NetName=THR7 Pin=J3-14
+Added Pin To Net: NetName=+5V Pin=J3-15
+Added Pin To Net: NetName=+3V3 Pin=J3-16
+Added Pin To Net: NetName=PWM8 Pin=J3-17
+Added Pin To Net: NetName=PWM9 Pin=J3-18
+Added Pin To Net: NetName=Rx1 Pin=J3-19
+Added Pin To Net: NetName=Tx1 Pin=J3-20
+Added Pin To Net: NetName=Rx2 Pin=J3-21
+Added Pin To Net: NetName=Tx2 Pin=J3-22
+Added Pin To Net: NetName=GPIO0 Pin=J3-23
+Added Pin To Net: NetName=GPIO1 Pin=J3-24
+Added Pin To Net: NetName=GPIO2 Pin=J3-25
+Added Pin To Net: NetName=GPIO3 Pin=J3-26
+Added Pin To Net: NetName=GPIO4 Pin=J3-27
+Added Pin To Net: NetName=GPIO5 Pin=J3-28
+Added Pin To Net: NetName=+12V Pin=J4-1
+Added Pin To Net: NetName=GND Pin=J4-2
+Added Pin To Net: NetName=SDA1 Pin=J4-3
+Added Pin To Net: NetName=SCL1 Pin=J4-4
+Added Pin To Net: NetName=SDA2 Pin=J4-5
+Added Pin To Net: NetName=SCL2 Pin=J4-6
+Added Pin To Net: NetName=THR0 Pin=J4-7
+Added Pin To Net: NetName=THR1 Pin=J4-8
+Added Pin To Net: NetName=THR2 Pin=J4-9
+Added Pin To Net: NetName=THR3 Pin=J4-10
+Added Pin To Net: NetName=THR4 Pin=J4-11
+Added Pin To Net: NetName=THR5 Pin=J4-12
+Added Pin To Net: NetName=THR6 Pin=J4-13
+Added Pin To Net: NetName=THR7 Pin=J4-14
+Added Pin To Net: NetName=+5V Pin=J4-15
+Added Pin To Net: NetName=+3V3 Pin=J4-16
+Added Pin To Net: NetName=PWM8 Pin=J4-17
+Added Pin To Net: NetName=PWM9 Pin=J4-18
+Added Pin To Net: NetName=Rx1 Pin=J4-19
+Added Pin To Net: NetName=Tx1 Pin=J4-20
+Added Pin To Net: NetName=Rx2 Pin=J4-21
+Added Pin To Net: NetName=Tx2 Pin=J4-22
+Added Pin To Net: NetName=GPIO0 Pin=J4-23
+Added Pin To Net: NetName=GPIO1 Pin=J4-24
+Added Pin To Net: NetName=GPIO2 Pin=J4-25
+Added Pin To Net: NetName=GPIO3 Pin=J4-26
+Added Pin To Net: NetName=GPIO4 Pin=J4-27
+Added Pin To Net: NetName=GPIO5 Pin=J4-28
+Added Member To Class: ClassName=BaseCard Member=Component J1 0461144241
+Added Member To Class: ClassName=BaseCard Member=Component J2 0461144241
+Added Member To Class: ClassName=BaseCard Member=Component J3 929745-01-14-I
+Added Member To Class: ClassName=BaseCard Member=Component J4 929745-01-14-I
+Added Room: Name=BaseCard

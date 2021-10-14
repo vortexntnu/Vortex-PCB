@@ -1,0 +1,75 @@
+Change Component DesignItemId : Designator=D3 Old DesignItemId=LG R971-KN-1 New DesignItemId=LH R974-LP-1
+Change Component DesignItemId : Designator=D4 Old DesignItemId=LY R976-PS-36 New DesignItemId=LH R974-LP-1
+Change Component DesignItemId : Designator=D1 Old DesignItemId=VAOL-S8WR4 New DesignItemId=LH R974-LP-1
+Change Component Footprint: Designator=D1 Old Footprint=LED 0805/2012 New Footprint=LED 0805/2012 RED
+Change Component Footprint: Designator=D3 Old Footprint=LED 0805/2012 GREEN New Footprint=LED 0805/2012 RED
+Change Component Footprint: Designator=D4 Old Footprint=LED 0805/2012 YELLOW New Footprint=LED 0805/2012 RED
+Change Component Comment : Designator=D3 Old Comment=Green New Comment=Red
+Change Component Comment : Designator=D1 Old Comment=White New Comment=Red
+Change Component Comment : Designator=D4 Old Comment=Yellow New Comment=Red
+Change Component Description : Designator=D3 Old Description=LED GREEN DIFFUSED 0805 SMD New Description=LED RED DIFFUSED 0805 SMD
+Change Component Description : Designator=D1 Old Description=LED WHITE DIFFUSED 0805 SMD New Description=LED RED DIFFUSED 0805 SMD
+Change Component Description : Designator=D4 Old Description=LED YELLOW DIFFUSED 0805 SMD New Description=LED RED DIFFUSED 0805 SMD
+Change component parameters: Designator = "D3"; Footprint = "LED 0805/2012 RED"; UniqueID = "\MSWTGIUW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Colour"; Value = "Red"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.osram-os.com/Graphics/XPic8/00078869_0.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Digi-Key Listing"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.digikey.ca/product-detail/en/LH%20R974-LP-1/475-1415-2-ND/1227932"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current (Test)"; Value = "20mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "0805 (2012 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Transparency"; Value = "Diffused"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "OSRAM Opto Semiconductors Inc."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Millicandela"; Value = "41mcd"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartId"; Value = "7077"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "LH R974-LP-1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "0,0621"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "475-1415-2-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "Green"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Viewing Angle"; Value = "160"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Forward"; Value = "1.8V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "D4"; Footprint = "LED 0805/2012 RED"; UniqueID = "\HASYMEMD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Colour"; Value = "Red"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.osram-os.com/Graphics/XPic8/00078869_0.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Digi-Key Listing"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.digikey.ca/product-detail/en/LH%20R974-LP-1/475-1415-2-ND/1227932"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current (Test)"; Value = "20mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "0805 (2012 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Transparency"; Value = "Diffused"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "OSRAM Opto Semiconductors Inc."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Millicandela"; Value = "41mcd"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartId"; Value = "7077"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "LH R974-LP-1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "0,0621"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "475-1415-2-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "Green"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Viewing Angle"; Value = "160"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Forward"; Value = "1.8V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "D1"; Footprint = "LED 0805/2012 RED"; UniqueID = "\UVJASYWU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Colour"; Value = "Red"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.osram-os.com/Graphics/XPic8/00078869_0.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Digi-Key Listing"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.digikey.ca/product-detail/en/LH%20R974-LP-1/475-1415-2-ND/1227932"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current (Test)"; Value = "20mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "0805 (2012 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Transparency"; Value = "Diffused"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "OSRAM Opto Semiconductors Inc."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Millicandela"; Value = "41mcd"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartId"; Value = "7077"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "LH R974-LP-1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "0,0621"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "475-1415-2-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "Green"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Viewing Angle"; Value = "160"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Forward"; Value = "1.8V"; VariantName = "[No Variations]"

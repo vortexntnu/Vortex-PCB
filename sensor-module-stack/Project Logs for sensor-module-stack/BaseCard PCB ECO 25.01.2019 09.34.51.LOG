@@ -1,0 +1,58 @@
+Added Component: Designator=J1(CONN_HEADER_4PWR_24SGL_2.36MM)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.molex.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.molex.com/pdm_docs/sd/459854111_sd.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Positions"; Value = "28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "0459854142"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "WM8736-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SDA1 Pin=J1-1
+Added Pin To Net: NetName=SCL1 Pin=J1-2
+Added Pin To Net: NetName=SDA2 Pin=J1-3
+Added Pin To Net: NetName=SCL2 Pin=J1-4
+Added Pin To Net: NetName=THR0 Pin=J1-5
+Added Pin To Net: NetName=THR1 Pin=J1-6
+Added Pin To Net: NetName=THR2 Pin=J1-7
+Added Pin To Net: NetName=THR3 Pin=J1-8
+Added Pin To Net: NetName=THR4 Pin=J1-9
+Added Pin To Net: NetName=THR5 Pin=J1-10
+Added Pin To Net: NetName=THR6 Pin=J1-11
+Added Pin To Net: NetName=THR7 Pin=J1-12
+Added Pin To Net: NetName=PWM8 Pin=J1-13
+Added Pin To Net: NetName=PWM9 Pin=J1-14
+Added Pin To Net: NetName=Rx1 Pin=J1-15
+Added Pin To Net: NetName=Tx1 Pin=J1-16
+Added Pin To Net: NetName=Rx2 Pin=J1-17
+Added Pin To Net: NetName=Tx2 Pin=J1-18
+Added Pin To Net: NetName=GPIO0 Pin=J1-19
+Added Pin To Net: NetName=GPIO1 Pin=J1-20
+Added Pin To Net: NetName=GPIO2 Pin=J1-21
+Added Pin To Net: NetName=GPIO3 Pin=J1-22
+Added Pin To Net: NetName=GPIO4 Pin=J1-23
+Added Pin To Net: NetName=GPIO5 Pin=J1-24
+Added Pin To Net: NetName=+12V Pin=J1-P1A
+Added Pin To Net: NetName=+12V Pin=J1-P1A
+Added Pin To Net: NetName=+12V Pin=J1-P1A
+Added Pin To Net: NetName=+12V Pin=J1-P1A
+Added Pin To Net: NetName=+12V Pin=J1-P1A
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=+5V Pin=J1-P2A
+Added Pin To Net: NetName=+5V Pin=J1-P2A
+Added Pin To Net: NetName=+5V Pin=J1-P2A
+Added Pin To Net: NetName=+5V Pin=J1-P2A
+Added Pin To Net: NetName=+5V Pin=J1-P2A
+Added Pin To Net: NetName=+3V3 Pin=J1-P2B
+Added Pin To Net: NetName=+3V3 Pin=J1-P2B
+Added Pin To Net: NetName=+3V3 Pin=J1-P2B
+Added Pin To Net: NetName=+3V3 Pin=J1-P2B
+Added Pin To Net: NetName=+3V3 Pin=J1-P2B
+Added Member To Class: ClassName=BaseCard Member=Component J1 0459854142
+Added Room: Name=BaseCard

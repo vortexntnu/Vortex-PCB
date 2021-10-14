@@ -1,0 +1,43 @@
+Added Component: Designator=L2(TDK VLCF4028-2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://product.tdk.com/info/en/catalog/datasheets/inductor_commercial_power_vlcf4028-2_en.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Digi-Key Listing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.digikey.com/product-detail/en/tdk-corporation/VLCF4028T-330MR61-2/445-6549-2-ND/2465306"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current - Saturation"; Value = "610mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "610mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Resistance (DCR)"; Value = "350 mOhm Max"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device Package"; Value = "Nonstandard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inductance"; Value = "33uH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material - Core"; Value = "Ferrite"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40C ~ 105C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartId"; Value = "16423"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "VLCF4028T-330MR61-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "0,441"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "VLCF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shielding"; Value = "Shielded"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "445-6549-2-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Wirewound"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "33uH"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J3-P1B
+Added Pin To Net: NetName=GND Pin=J3-P1B
+Added Pin To Net: NetName=GND Pin=J3-P1B
+Added Pin To Net: NetName=GND Pin=J3-P1B
+Added Pin To Net: NetName=GND Pin=J4-P1B
+Added Pin To Net: NetName=GND Pin=J4-P1B
+Added Pin To Net: NetName=GND Pin=J4-P1B
+Added Pin To Net: NetName=GND Pin=J4-P1B
+Added Pin To Net: NetName=12V Pin=L2-1
+Added Pin To Net: NetName=NetC13_2 Pin=L2-2
+Added Member To Class: ClassName=U_OPID[352] 3 Member=Component L2 VLCF4028T-330MR61-2

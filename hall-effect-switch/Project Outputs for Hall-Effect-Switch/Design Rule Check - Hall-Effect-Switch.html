@@ -1,0 +1,529 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD17\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">19.02.2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">14.41.29</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc" class="file"><acronym title="C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc">C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">63</td></tr>
+</table>
+</td>
+</table><a name="ID3RDEK3PDRVUENVQAXAUJMBFWOKRWQC32QFIG40BBKKXLEXBV2CGK"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4KXQO2GDHVVAPSXWPB3GGWPFTDX4KGWEANQBG2GQW1REQST3CPCE">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3LAIIXWRJDTZJ5T3F5WDTE3N0OGP05GG0IVCZNFU3I40ROZVHBQE">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDYW2PAHAIAN5MA2BRQKF4QBXDDDH5DB1KODZ0OD5SVMQGHW3FAEH">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDS4JAUZSZUT2YBGSYOTUUVAH0KNPVSDSLLZGOKUN4YVT5HE0YZUGL">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRUJZ40I1TZVRIXPE12VOKXUID0NANBLGQTQ3NPIJ05GCJZDE5MG">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZ5UYMFFLGEIUFGZT5NIXRLDR2JH2TXJ40F1OWSEQ3N2JMMA4KPZM">SMD Neck-Down Constraint (Percent=50%) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4HZCVF5IBYY0HHGQI4LUOXFC1HP1VTR2WDFQ0ZKRAA5SOBQRP00G">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCYYQJYC4ORTYEGNH32W4LOTXDVHJ4DJL21D0DJBNFSCMN4K2FCC">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAMRHBQOELSHIIFVWD3K50DYSUNY4YWVMRZ0IN3DDXNVV4QRTKHRN">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDC5PSNDLENJ3LFWJ3CXMNEAYCEO22VXNDLGRJRBLI0Q0T0PTYGXAP">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1NSIJUBX1GL4G4J4TMVKOB4C1BJ3IXORGWPPW0KZ3ZQ4XZGYXQBM">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">53</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1MDIJJ2LTOGGOBYDSGUIG54TQIOKMILHJNTHWEJPVTRIEQ4RJSZJ">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHUA13CWMZ02FM5DRUR1ZRGK5AL1XDDIRP544NHNMHP2BLNQMDT3J">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1TUOJLDMGZE0ILV4RBY0ZWO3NHSV2SQTCB0OKCP5541H3UOJJKAE">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">63</td>
+</tr>
+</table><br><a name="IDC5PSNDLENJ3LFWJ3CXMNEAYCEO22VXNDLGRJRBLI0Q0T0PTYGXAP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5913.213mil|Location2.X=5924.463mil|Location1.Y=1254.375mil|Location2.Y=1265.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5913.213mil|Location2.X=5924.463mil|Location1.Y=1254.375mil|Location2.Y=1265.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.676mil &lt; 10mil) Between Via (5885mil,1260mil) from Top Layer to Bottom Layer And Pad C_IN1-2(5972.952mil,1220mil) on Top Layer [Top Solder] Mask Sliver [9.676mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5982.013mil|Location2.X=5993.263mil|Location1.Y=1623.564mil|Location2.Y=1634.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5982.013mil|Location2.X=5993.263mil|Location1.Y=1623.564mil|Location2.Y=1634.814mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad R2-1(6010.276mil,1645mil) on Bottom Layer And Pad R2-2(5965mil,1645mil) on Bottom Layer [Bottom Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6323.564mil|Location2.X=6334.814mil|Location1.Y=1196.737mil|Location2.Y=1207.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6323.564mil|Location2.X=6334.814mil|Location1.Y=1196.737mil|Location2.Y=1207.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad R3-1(6345mil,1225mil) on Bottom Layer And Pad R3-2(6345mil,1179.724mil) on Bottom Layer [Bottom Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5794.374mil|Location2.X=5805.624mil|Location1.Y=1847.777mil|Location2.Y=1859.027mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5794.374mil|Location2.X=5805.624mil|Location1.Y=1847.777mil|Location2.Y=1859.027mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.024mil &lt; 10mil) Between Pad C1-2(5782.676mil,1870mil) on Bottom Layer And Pad C1-1(5817.322mil,1870mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.024mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6316.875mil|Location2.X=6328.125mil|Location1.Y=1514.375mil|Location2.Y=1525.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6316.875mil|Location2.X=6328.125mil|Location1.Y=1514.375mil|Location2.Y=1525.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.268mil &lt; 10mil) Between Via (6300mil,1545mil) from Top Layer to Bottom Layer And Via (6345mil,1495mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [9.268mil] / [Bottom Solder] Mask Sliver [9.268mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID1NSIJUBX1GL4G4J4TMVKOB4C1BJ3IXORGWPPW0KZ3ZQ4XZGYXQBM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6114.625mil|Location2.X=6125.875mil|Location1.Y=1519.875mil|Location2.Y=1531.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6114.625mil|Location2.X=6125.875mil|Location1.Y=1519.875mil|Location2.Y=1531.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.5mil &lt; 10mil) Between Track (6115mil,1484mil)(6115mil,1598mil) on Top Overlay And Pad hall effect sensor1-3(6140mil,1541mil) on Top Layer [Top Overlay] to [Top Solder] clearance [4.5mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.266mil|Location2.X=6085.516mil|Location1.Y=1480.759mil|Location2.Y=1492.009mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.266mil|Location2.X=6085.516mil|Location1.Y=1480.759mil|Location2.Y=1492.009mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.277mil &lt; 10mil) Between Track (6085mil,1484mil)(6115mil,1484mil) on Top Overlay And Pad hall effect sensor1-2(6060mil,1503mil) on Top Layer [Top Overlay] to [Top Solder] clearance [5.277mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.125mil|Location2.X=6085.375mil|Location1.Y=1481.875mil|Location2.Y=1493.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.125mil|Location2.X=6085.375mil|Location1.Y=1481.875mil|Location2.Y=1493.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.5mil &lt; 10mil) Between Track (6085mil,1484mil)(6085mil,1598mil) on Top Overlay And Pad hall effect sensor1-2(6060mil,1503mil) on Top Layer [Top Overlay] to [Top Solder] clearance [4.5mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.266mil|Location2.X=6085.516mil|Location1.Y=1589.991mil|Location2.Y=1601.241mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.266mil|Location2.X=6085.516mil|Location1.Y=1589.991mil|Location2.Y=1601.241mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.277mil &lt; 10mil) Between Track (6085mil,1598mil)(6115mil,1598mil) on Top Overlay And Pad hall effect sensor1-1(6060mil,1579mil) on Top Layer [Top Overlay] to [Top Solder] clearance [5.277mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.125mil|Location2.X=6085.375mil|Location1.Y=1557.875mil|Location2.Y=1569.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.125mil|Location2.X=6085.375mil|Location1.Y=1557.875mil|Location2.Y=1569.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.5mil &lt; 10mil) Between Track (6085mil,1484mil)(6085mil,1598mil) on Top Overlay And Pad hall effect sensor1-1(6060mil,1579mil) on Top Layer [Top Overlay] to [Top Solder] clearance [4.5mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6481.018mil|Location2.X=6488.685mil|Location1.Y=1611.167mil|Location2.Y=1618.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6481.018mil|Location2.X=6488.685mil|Location1.Y=1611.167mil|Location2.Y=1618.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Text "hall effect sensor1" (6025mil,1615mil) on Top Overlay And Pad P_OUT1-2(6505mil,1605mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6244.375mil|Location2.X=6255.625mil|Location1.Y=1341.171mil|Location2.Y=1352.421mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6244.375mil|Location2.X=6255.625mil|Location1.Y=1341.171mil|Location2.Y=1352.421mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.611mil &lt; 10mil) Between Text "R1" (6250mil,1310mil) on Bottom Overlay And Pad D1-C(6280mil,1394.408mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [8.611mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6208.43mil|Location2.X=6219.68mil|Location1.Y=1371.067mil|Location2.Y=1382.317mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6208.43mil|Location2.X=6219.68mil|Location1.Y=1371.067mil|Location2.Y=1382.317mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.843mil &lt; 10mil) Between Track (6163.858mil,1376.692mil)(6205.196mil,1376.692mil) on Bottom Overlay And Pad D1-C(6280mil,1394.408mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [9.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5942.173mil|Location2.X=5953.423mil|Location1.Y=1626.541mil|Location2.Y=1637.791mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5942.173mil|Location2.X=5953.423mil|Location1.Y=1626.541mil|Location2.Y=1637.791mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.288mil &lt; 10mil) Between Track (5942.638mil,1625mil)(5942.638mil,1630mil) on Bottom Overlay And Pad R2-2(5965mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.288mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5942.173mil|Location2.X=5953.423mil|Location1.Y=1652.209mil|Location2.Y=1663.459mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5942.173mil|Location2.X=5953.423mil|Location1.Y=1652.209mil|Location2.Y=1663.459mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.288mil &lt; 10mil) Between Track (5942.638mil,1660mil)(5942.638mil,1665mil) on Bottom Overlay And Pad R2-2(5965mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.288mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5976.6mil|Location2.X=5987.85mil|Location1.Y=1627.564mil|Location2.Y=1638.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5976.6mil|Location2.X=5987.85mil|Location1.Y=1627.564mil|Location2.Y=1638.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.921mil &lt; 10mil) Between Track (5987.638mil,1625mil)(5987.638mil,1665mil) on Bottom Overlay And Pad R2-2(5965mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [4.921mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5944.611mil|Location2.X=5955.861mil|Location1.Y=1624.946mil|Location2.Y=1636.196mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5944.611mil|Location2.X=5955.861mil|Location1.Y=1624.946mil|Location2.Y=1636.196mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.236mil &lt; 10mil) Between Track (5942.638mil,1625mil)(6032.638mil,1625mil) on Bottom Overlay And Pad R2-2(5965mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5944.611mil|Location2.X=5955.861mil|Location1.Y=1653.804mil|Location2.Y=1665.054mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5944.611mil|Location2.X=5955.861mil|Location1.Y=1653.804mil|Location2.Y=1665.054mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.236mil &lt; 10mil) Between Track (5942.638mil,1665mil)(6032.638mil,1665mil) on Bottom Overlay And Pad R2-2(5965mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5987.426mil|Location2.X=5998.676mil|Location1.Y=1627.564mil|Location2.Y=1638.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5987.426mil|Location2.X=5998.676mil|Location1.Y=1627.564mil|Location2.Y=1638.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.921mil &lt; 10mil) Between Track (5987.638mil,1625mil)(5987.638mil,1665mil) on Bottom Overlay And Pad R2-1(6010.276mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [4.921mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6021.853mil|Location2.X=6033.103mil|Location1.Y=1626.541mil|Location2.Y=1637.791mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6021.853mil|Location2.X=6033.103mil|Location1.Y=1626.541mil|Location2.Y=1637.791mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.288mil &lt; 10mil) Between Track (6032.638mil,1625mil)(6032.638mil,1630mil) on Bottom Overlay And Pad R2-1(6010.276mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.288mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6021.853mil|Location2.X=6033.103mil|Location1.Y=1652.209mil|Location2.Y=1663.459mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6021.853mil|Location2.X=6033.103mil|Location1.Y=1652.209mil|Location2.Y=1663.459mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.288mil &lt; 10mil) Between Track (6032.638mil,1660mil)(6032.638mil,1665mil) on Bottom Overlay And Pad R2-1(6010.276mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.288mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5989.887mil|Location2.X=6001.137mil|Location1.Y=1624.946mil|Location2.Y=1636.196mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5989.887mil|Location2.X=6001.137mil|Location1.Y=1624.946mil|Location2.Y=1636.196mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.236mil &lt; 10mil) Between Track (5942.638mil,1625mil)(6032.638mil,1625mil) on Bottom Overlay And Pad R2-1(6010.276mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5989.887mil|Location2.X=6001.137mil|Location1.Y=1653.804mil|Location2.Y=1665.054mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5989.887mil|Location2.X=6001.137mil|Location1.Y=1653.804mil|Location2.Y=1665.054mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.236mil &lt; 10mil) Between Track (5942.638mil,1665mil)(6032.638mil,1665mil) on Bottom Overlay And Pad R2-1(6010.276mil,1645mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6352.209mil|Location2.X=6363.459mil|Location1.Y=1156.897mil|Location2.Y=1168.147mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6352.209mil|Location2.X=6363.459mil|Location1.Y=1156.897mil|Location2.Y=1168.147mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.288mil &lt; 10mil) Between Track (6360mil,1157.362mil)(6365mil,1157.362mil) on Bottom Overlay And Pad R3-2(6345mil,1179.724mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.288mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6326.541mil|Location2.X=6337.791mil|Location1.Y=1156.897mil|Location2.Y=1168.147mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6326.541mil|Location2.X=6337.791mil|Location1.Y=1156.897mil|Location2.Y=1168.147mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.288mil &lt; 10mil) Between Track (6325mil,1157.362mil)(6330mil,1157.362mil) on Bottom Overlay And Pad R3-2(6345mil,1179.724mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.288mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.804mil|Location2.X=6365.054mil|Location1.Y=1159.335mil|Location2.Y=1170.585mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.804mil|Location2.X=6365.054mil|Location1.Y=1159.335mil|Location2.Y=1170.585mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.236mil &lt; 10mil) Between Track (6365mil,1157.362mil)(6365mil,1247.362mil) on Bottom Overlay And Pad R3-2(6345mil,1179.724mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6324.946mil|Location2.X=6336.196mil|Location1.Y=1159.335mil|Location2.Y=1170.585mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6324.946mil|Location2.X=6336.196mil|Location1.Y=1159.335mil|Location2.Y=1170.585mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.236mil &lt; 10mil) Between Track (6325mil,1157.362mil)(6325mil,1247.362mil) on Bottom Overlay And Pad R3-2(6345mil,1179.724mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6327.564mil|Location2.X=6338.814mil|Location1.Y=1191.323mil|Location2.Y=1202.573mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6327.564mil|Location2.X=6338.814mil|Location1.Y=1191.323mil|Location2.Y=1202.573mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.921mil &lt; 10mil) Between Track (6325mil,1202.362mil)(6365mil,1202.362mil) on Bottom Overlay And Pad R3-2(6345mil,1179.724mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [4.921mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6352.209mil|Location2.X=6363.459mil|Location1.Y=1236.577mil|Location2.Y=1247.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6352.209mil|Location2.X=6363.459mil|Location1.Y=1236.577mil|Location2.Y=1247.827mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.288mil &lt; 10mil) Between Track (6360mil,1247.362mil)(6365mil,1247.362mil) on Bottom Overlay And Pad R3-1(6345mil,1225mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.288mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6326.541mil|Location2.X=6337.791mil|Location1.Y=1236.577mil|Location2.Y=1247.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6326.541mil|Location2.X=6337.791mil|Location1.Y=1236.577mil|Location2.Y=1247.827mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.288mil &lt; 10mil) Between Track (6325mil,1247.362mil)(6330mil,1247.362mil) on Bottom Overlay And Pad R3-1(6345mil,1225mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.288mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.804mil|Location2.X=6365.054mil|Location1.Y=1204.611mil|Location2.Y=1215.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.804mil|Location2.X=6365.054mil|Location1.Y=1204.611mil|Location2.Y=1215.861mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.236mil &lt; 10mil) Between Track (6365mil,1157.362mil)(6365mil,1247.362mil) on Bottom Overlay And Pad R3-1(6345mil,1225mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6324.946mil|Location2.X=6336.196mil|Location1.Y=1204.611mil|Location2.Y=1215.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6324.946mil|Location2.X=6336.196mil|Location1.Y=1204.611mil|Location2.Y=1215.861mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.236mil &lt; 10mil) Between Track (6325mil,1157.362mil)(6325mil,1247.362mil) on Bottom Overlay And Pad R3-1(6345mil,1225mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [5.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6327.564mil|Location2.X=6338.814mil|Location1.Y=1202.15mil|Location2.Y=1213.4mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6327.564mil|Location2.X=6338.814mil|Location1.Y=1202.15mil|Location2.Y=1213.4mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.921mil &lt; 10mil) Between Track (6325mil,1202.362mil)(6365mil,1202.362mil) on Bottom Overlay And Pad R3-1(6345mil,1225mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [4.921mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5827.15mil|Location2.X=5838.4mil|Location1.Y=1851.777mil|Location2.Y=1863.027mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5827.15mil|Location2.X=5838.4mil|Location1.Y=1851.777mil|Location2.Y=1863.027mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.284mil &lt; 10mil) Between Track (5839.37mil,1850.316mil)(5839.37mil,1858.19mil) on Bottom Overlay And Pad C1-1(5817.322mil,1870mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.284mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5827.15mil|Location2.X=5838.4mil|Location1.Y=1876.973mil|Location2.Y=1888.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5827.15mil|Location2.X=5838.4mil|Location1.Y=1876.973mil|Location2.Y=1888.223mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.284mil &lt; 10mil) Between Track (5839.37mil,1881.812mil)(5839.37mil,1889.686mil) on Bottom Overlay And Pad C1-1(5817.322mil,1870mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.284mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5799.886mil|Location2.X=5811.136mil|Location1.Y=1849.71mil|Location2.Y=1860.96mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5799.886mil|Location2.X=5811.136mil|Location1.Y=1849.71mil|Location2.Y=1860.96mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.133mil &lt; 10mil) Between Track (5760.63mil,1850.316mil)(5839.37mil,1850.316mil) on Bottom Overlay And Pad C1-1(5817.322mil,1870mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [4.133mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5799.886mil|Location2.X=5811.136mil|Location1.Y=1879.041mil|Location2.Y=1890.291mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5799.886mil|Location2.X=5811.136mil|Location1.Y=1879.041mil|Location2.Y=1890.291mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.135mil &lt; 10mil) Between Track (5760.63mil,1889.686mil)(5839.37mil,1889.686mil) on Bottom Overlay And Pad C1-1(5817.322mil,1870mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [4.135mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5761.599mil|Location2.X=5772.849mil|Location1.Y=1851.777mil|Location2.Y=1863.027mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5761.599mil|Location2.X=5772.849mil|Location1.Y=1851.777mil|Location2.Y=1863.027mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.282mil &lt; 10mil) Between Track (5760.63mil,1850.316mil)(5760.63mil,1858.19mil) on Bottom Overlay And Pad C1-2(5782.676mil,1870mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.282mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5761.599mil|Location2.X=5772.849mil|Location1.Y=1876.973mil|Location2.Y=1888.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5761.599mil|Location2.X=5772.849mil|Location1.Y=1876.973mil|Location2.Y=1888.223mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.282mil &lt; 10mil) Between Track (5760.63mil,1881.812mil)(5760.63mil,1889.686mil) on Bottom Overlay And Pad C1-2(5782.676mil,1870mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.282mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5765.24mil|Location2.X=5776.49mil|Location1.Y=1849.71mil|Location2.Y=1860.96mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5765.24mil|Location2.X=5776.49mil|Location1.Y=1849.71mil|Location2.Y=1860.96mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.133mil &lt; 10mil) Between Track (5760.63mil,1850.316mil)(5839.37mil,1850.316mil) on Bottom Overlay And Pad C1-2(5782.676mil,1870mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [4.133mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5765.24mil|Location2.X=5776.49mil|Location1.Y=1879.041mil|Location2.Y=1890.291mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5765.24mil|Location2.X=5776.49mil|Location1.Y=1879.041mil|Location2.Y=1890.291mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.135mil &lt; 10mil) Between Track (5760.63mil,1889.686mil)(5839.37mil,1889.686mil) on Bottom Overlay And Pad C1-2(5782.676mil,1870mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [4.135mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5717.901mil|Location2.X=5729.151mil|Location1.Y=1814.952mil|Location2.Y=1826.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5717.901mil|Location2.X=5729.151mil|Location1.Y=1814.952mil|Location2.Y=1826.202mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (5726mil,1828mil)(5792mil,1828mil) on Bottom Overlay And Pad U1-8(5683mil,1805mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5717.901mil|Location2.X=5729.151mil|Location1.Y=1633.798mil|Location2.Y=1645.048mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5717.901mil|Location2.X=5729.151mil|Location1.Y=1633.798mil|Location2.Y=1645.048mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (5726mil,1632mil)(5834mil,1632mil) on Bottom Overlay And Pad U1-5(5683mil,1655mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5830.849mil|Location2.X=5842.099mil|Location1.Y=1633.798mil|Location2.Y=1645.048mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5830.849mil|Location2.X=5842.099mil|Location1.Y=1633.798mil|Location2.Y=1645.048mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (5726mil,1632mil)(5834mil,1632mil) on Bottom Overlay And Pad U1-4(5877mil,1655mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5830.849mil|Location2.X=5842.099mil|Location1.Y=1814.952mil|Location2.Y=1826.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5830.849mil|Location2.X=5842.099mil|Location1.Y=1814.952mil|Location2.Y=1826.202mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (5792mil,1828mil)(5834mil,1828mil) on Bottom Overlay And Pad U1-1(5877mil,1805mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6538.605mil|Location2.X=6549.855mil|Location1.Y=1165.106mil|Location2.Y=1176.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6538.605mil|Location2.X=6549.855mil|Location1.Y=1165.106mil|Location2.Y=1176.356mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.664mil &lt; 10mil) Between Track (6546.93mil,1177.48mil)(6546.93mil,1283.78mil) on Bottom Overlay And Pad R4-1(6519.37mil,1144.016mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [6.664mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6486.186mil|Location2.X=6497.436mil|Location1.Y=1124.611mil|Location2.Y=1135.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6486.186mil|Location2.X=6497.436mil|Location1.Y=1124.611mil|Location2.Y=1135.861mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.873mil &lt; 10mil) Between Track (6476.064mil,1130.236mil)(6483.938mil,1130.236mil) on Bottom Overlay And Pad R4-1(6519.37mil,1144.016mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.873mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6438.941mil|Location2.X=6450.191mil|Location1.Y=1278.155mil|Location2.Y=1289.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6438.941mil|Location2.X=6450.191mil|Location1.Y=1278.155mil|Location2.Y=1289.405mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (6413.07mil,1283.78mil)(6436.692mil,1283.78mil) on Bottom Overlay And Pad R4-2(6480mil,1270mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6509.809mil|Location2.X=6521.059mil|Location1.Y=1278.155mil|Location2.Y=1289.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6509.809mil|Location2.X=6521.059mil|Location1.Y=1278.155mil|Location2.Y=1289.405mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (6523.308mil,1283.78mil)(6546.93mil,1283.78mil) on Bottom Overlay And Pad R4-2(6480mil,1270mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6410.145mil|Location2.X=6421.395mil|Location1.Y=1165.106mil|Location2.Y=1176.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6410.145mil|Location2.X=6421.395mil|Location1.Y=1165.106mil|Location2.Y=1176.356mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.664mil &lt; 10mil) Between Track (6413.07mil,1177.48mil)(6413.07mil,1283.78mil) on Bottom Overlay And Pad R4-3(6440.63mil,1144.016mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [6.664mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6462.565mil|Location2.X=6473.815mil|Location1.Y=1124.611mil|Location2.Y=1135.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6462.565mil|Location2.X=6473.815mil|Location1.Y=1124.611mil|Location2.Y=1135.861mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (6476.064mil,1130.236mil)(6483.938mil,1130.236mil) on Bottom Overlay And Pad R4-3(6440.63mil,1144.016mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6216.186mil|Location2.X=6227.436mil|Location1.Y=1124.571mil|Location2.Y=1135.821mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6216.186mil|Location2.X=6227.436mil|Location1.Y=1124.571mil|Location2.Y=1135.821mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.873mil &lt; 10mil) Between Track (6206.064mil,1130.196mil)(6213.938mil,1130.196mil) on Bottom Overlay And Pad R1-1(6249.37mil,1143.976mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.873mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6268.605mil|Location2.X=6279.855mil|Location1.Y=1165.066mil|Location2.Y=1176.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6268.605mil|Location2.X=6279.855mil|Location1.Y=1165.066mil|Location2.Y=1176.316mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.664mil &lt; 10mil) Between Track (6276.93mil,1177.44mil)(6276.93mil,1283.74mil) on Bottom Overlay And Pad R1-1(6249.37mil,1143.976mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [6.664mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6239.809mil|Location2.X=6251.059mil|Location1.Y=1278.115mil|Location2.Y=1289.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6239.809mil|Location2.X=6251.059mil|Location1.Y=1278.115mil|Location2.Y=1289.365mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (6253.308mil,1283.74mil)(6276.93mil,1283.74mil) on Bottom Overlay And Pad R1-2(6210mil,1269.96mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6224.382mil|Location2.X=6235.632mil|Location1.Y=1297.869mil|Location2.Y=1309.119mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6224.382mil|Location2.X=6235.632mil|Location1.Y=1297.869mil|Location2.Y=1309.119mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.012mil &lt; 10mil) Between Text "R1" (6250mil,1310mil) on Bottom Overlay And Pad R1-2(6210mil,1269.96mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [8.012mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.941mil|Location2.X=6180.191mil|Location1.Y=1278.115mil|Location2.Y=1289.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6168.941mil|Location2.X=6180.191mil|Location1.Y=1278.115mil|Location2.Y=1289.365mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (6143.07mil,1283.74mil)(6166.692mil,1283.74mil) on Bottom Overlay And Pad R1-2(6210mil,1269.96mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6192.565mil|Location2.X=6203.815mil|Location1.Y=1124.571mil|Location2.Y=1135.821mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6192.565mil|Location2.X=6203.815mil|Location1.Y=1124.571mil|Location2.Y=1135.821mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (6206.064mil,1130.196mil)(6213.938mil,1130.196mil) on Bottom Overlay And Pad R1-3(6170.63mil,1143.976mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6140.145mil|Location2.X=6151.395mil|Location1.Y=1165.066mil|Location2.Y=1176.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6140.145mil|Location2.X=6151.395mil|Location1.Y=1165.066mil|Location2.Y=1176.316mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.664mil &lt; 10mil) Between Track (6143.07mil,1177.44mil)(6143.07mil,1283.74mil) on Bottom Overlay And Pad R1-3(6170.63mil,1143.976mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [6.664mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID1MDIJJ2LTOGGOBYDSGUIG54TQIOKMILHJNTHWEJPVTRIEQ4RJSZJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6389.89mil|Location2.X=6401.14mil|Location1.Y=1363.102mil|Location2.Y=1374.352mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6389.89mil|Location2.X=6401.14mil|Location1.Y=1363.102mil|Location2.Y=1374.352mil|Absolute=True">Silk To Silk Clearance Constraint: (8.106mil &lt; 10mil) Between Text "D1" (6395mil,1332.204mil) on Bottom Overlay And Track (6396.142mil,1376.692mil)(6396.142mil,1687.716mil) on Bottom Overlay Silk Text to Silk Clearance [8.106mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6389.375mil|Location2.X=6400.625mil|Location1.Y=1363.1mil|Location2.Y=1374.35mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6389.375mil|Location2.X=6400.625mil|Location1.Y=1363.1mil|Location2.Y=1374.35mil|Absolute=True">Silk To Silk Clearance Constraint: (8.061mil &lt; 10mil) Between Text "D1" (6395mil,1332.204mil) on Bottom Overlay And Track (6358.74mil,1376.692mil)(6396.142mil,1376.692mil) on Bottom Overlay Silk Text to Silk Clearance [8.061mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6443.867mil|Location2.X=6455.117mil|Location1.Y=1643.867mil|Location2.Y=1655.117mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6443.867mil|Location2.X=6455.117mil|Location1.Y=1643.867mil|Location2.Y=1655.117mil|Absolute=True">Silk To Silk Clearance Constraint: (7.705mil &lt; 10mil) Between Text "P_OUT1" (6445mil,1645mil) on Bottom Overlay And Track (6455mil,1655mil)(6555mil,1655mil) on Bottom Overlay Silk Text to Silk Clearance [7.705mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6447.947mil|Location2.X=6455.614mil|Location1.Y=1591.183mil|Location2.Y=1598.85mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6447.947mil|Location2.X=6455.614mil|Location1.Y=1591.183mil|Location2.Y=1598.85mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 10mil) Between Text "P_OUT1" (6445mil,1645mil) on Bottom Overlay And Track (6455mil,1455mil)(6455mil,1655mil) on Bottom Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6447.947mil|Location2.X=6455.614mil|Location1.Y=1806.183mil|Location2.Y=1813.85mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\repo\Hall-effect-switch\Hall-Effect-Switch\Hall-Effect-Switch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6447.947mil|Location2.X=6455.614mil|Location1.Y=1806.183mil|Location2.Y=1813.85mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 10mil) Between Text "P_IN1" (6445mil,1860mil) on Bottom Overlay And Track (6455mil,1700mil)(6455mil,1900mil) on Bottom Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

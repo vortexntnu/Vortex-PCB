@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=Backplane.SchDoc
+Record=SheetSymbol|SourceDocument=Backplane.SchDoc|Designator=U_OPID[351] 5V Step-down regulator v2|SchDesignator=U_OPID[351] 5V Step-down regulator v2|FileName=OPID[351] 5V Step-down regulator v2.SchDoc|SymbolType=Normal|RawFileName=OPID[351] 5V Step-down regulator v2.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Backplane.SchDoc|Designator=U_OPID[352] 3|SchDesignator=U_OPID[352] 3|FileName=OPID[352] 3.3V Step-down regulator.SchDoc|SymbolType=Normal|RawFileName=OPID[352] 3.3V Step-down regulator.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

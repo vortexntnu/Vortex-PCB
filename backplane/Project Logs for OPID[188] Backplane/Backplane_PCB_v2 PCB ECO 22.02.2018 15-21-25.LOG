@@ -1,0 +1,32 @@
+Removed Member From Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=C7
+Removed Member From Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=C8
+Removed Member From Class: ClassName=U_OPID[352] 3 Member=C8
+Removed Member From Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=C9
+Removed Member From Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=C10
+Removed Member From Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=L1
+Removed Member From Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=U3
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J1-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J2-P1B
+Added Pin To Net: NetName=GND Pin=J3-P1B
+Added Pin To Net: NetName=GND Pin=J3-P1B
+Added Pin To Net: NetName=GND Pin=J3-P1B
+Added Pin To Net: NetName=GND Pin=J3-P1B
+Added Pin To Net: NetName=GND Pin=J4-P1B
+Added Pin To Net: NetName=GND Pin=J4-P1B
+Added Pin To Net: NetName=GND Pin=J4-P1B
+Added Pin To Net: NetName=GND Pin=J4-P1B
+Added Member To Class: ClassName=Backplane Member=Component C5 0.1uF
+Added Member To Class: ClassName=Backplane Member=Component C6 1uF
+Added Member To Class: ClassName=U_OPID[352] 3 Member=Component C11 10uF
+Added Member To Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=Component C13 0.10uF
+Added Member To Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=Component C14 1uF
+Added Member To Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=Component C15 1uF
+Added Member To Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=Component C16 47uF
+Added Member To Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=Component L2 FPV1006-150-R
+Added Member To Class: ClassName=U_OPID[351] 5V Step-down regulator v2 Member=Component U4 #NAME?

@@ -1,0 +1,31 @@
+﻿Field=#~Integer~#~50|Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~OPID[188] Backplane.PrjPcb|ReportField=ProjectFullPath~C:\repo\Backplane\OPID[188] Backplane.PrjPcb|ReportField=Title~Bill of Materials For Project [OPID[188] Backplane.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~65|ReportField=ReportTime~12:14:31|ReportField=ReportDate~04.03.2018|ReportField=ReportDateTime~04.03.2018 12:14:31|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=Application_BuildNumber~|ReportField=ApprovedBy~|ReportField=Author~Andreas Tesaker|ReportField=CheckedBy~|ReportField=CompanyName~VORTEX NTNU|ReportField=CurrentDate~04.03.2018|ReportField=CurrentTime~11:43:09|ReportField=Date~|ReportField=DocumentFullPathAndName~C:\repo\Backplane\Backplane.SchDoc|ReportField=DocumentName~Backplane.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~04.03.2018|ReportField=Organization~|ReportField=ProjectName~OPID[188] Backplane.PrjPcb|ReportField=Revision~A|ReportField=Rule~|ReportField=SheetNumber~1|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~188-1 Backplane|ReportField=DataSourceFileName~OPID[188] Backplane.PrjPcb|ReportField=DataSourceFullPath~C:\repo\Backplane\OPID[188] Backplane.PrjPcb|ReportField=PCBConfigurationName~Sources|ReportField=Item~|ReportField=ItemRevision~|ReportField=ItemAndRevision~|ReportField=ItemRevisionBase~|ReportField=ItemRevisionLevel1~|ReportField=ItemRevisionLevel2~|ReportField=ItemRevisionLevel1AndBase~|ReportField=ItemRevisionLevel2AndLevel1~
+1|10uF|CAP CER 10UF 50V X7S 1210|C1, C2, C8, C9, C10, C11, C12|CAP 1210/3225 - 2.8MM|C3225X7S1H106M250AB|7
+2|22uF|CAP ALUM 22UF 20% 35V SMD|C3|CAP ALUM 6.6MM|UWJ1V220MCL1GB|1
+3|22uF|CAP TANT 22UF 20V 20% 2917|C4|CAP POL 2917/7343|293D226X0020D2TE3|1
+4|0.10uF|CAP CER 0.1UF 50V X7R 1206|C13|CAP 1206/3216 - 1.0MM|GRM319R71H104KA01D|1
+5|1uF|CAP CER 1UF 16V X7R 0603|C14, C15|CAP 0603/1608|GRM188R71C105KA12D|2
+6|47uF|CAP CER 47UF 10V X5R 1206|C16, C17, C18, C19, C20, C21, C22, C23|CAP 1206/3216|GRM31CR61A476ME15L|8
+7|100uF|CAP ALUM 100UF 20% 50V SMD|C24|CAP ALUM 10.3MM|UUX1H101MNL1GS|1
+8|22uF|CAP CER 22UF 25V X5R 1206|C25, C26, C27, C28, C29, C30|CAP 1206/3216|GRM31CR61E226KE15L|6
+9|Red|LED RED DIFFUSED 0805 SMD|D1, D2, D3, D4|LED 0805/2012 RED|LH R974-LP-1|4
+10|BSS138NH6327XTSA2|MOSFET N-CH 60V 230MA SOT-23|IC1, IC2|INFINEON SOT-23-3|BSS138NH6327XTSA2|2
+11|0461144241||J1, J2, J3, J4|LPH_VERT.RECEPT._ASSY_4PX24S|0461144241|4
+12|DF13-4P-1.25DSA||J5, J6, J7, J8, J11, J12|HDRV4W35P125_1X4_665X340X430P|DF13-4P-1.25DSA|6
+13|B2B-XH-A(LF)(SN)|CONN HEADER XH TOP 2POS 2.5MM|J9|JST XH B2B-XH-A|B2B-XH-A(LF)(SN)|1
+14|B2P-VH-FB-B(LF)(SN)||J10|B2P-VH-FB-B|B2P-VH-FB-B(LF)(SN)|1
+15|VLCF4028T-330MR61-2|FIXED IND 33UH 610MA 350 MOHM|L1|TDK VLCF4028-2|VLCF4028T-330MR61-2|1
+16|FPV1006-150-R|FIXED IND 150NH 25A 0.41 MOHM|L2|FPV1006-150-R|FPV1006-150-R|1
+17|Header 3X2|Header, 3-Pin, Dual row|P1|HDR2X3|Header 3X2|1
+18|Header 12X2|Header, 12-Pin, Dual row|P2|HDR2X12|Header 12X2|1
+19|100k|RES SMD 100K OHM 1% 1/8W 0805|R1, R2|RES 0805/2012|ERJ-6ENF1003V|2
+20|10k|RES SMD 10K OHM 1% 1/8W 0805|R3, R4, R5, R6|RES 0805/2012|ERJ-6ENF1002V|4
+21|1.5k|RES SMD 1.5K OHM 0.1% 1/8W 0805|R7|RES 0805/2012|ERA-6AEB152V|1
+22|2k|RES SMD 2K OHM 0.1% 1/8W 0805|R8|RES 0805/2012|ERA-6AEB202V|1
+23|680|RES SMD 680 OHM 1% 1/8W 0805|R9|RES 0805/2012|ERJ-6ENF6800V|1
+24|330|RES SMD 330 OHM 5% 1/2W 0805|R10|RES 0805/2012|ERJ-P06J331V|1
+25|0.0|RES SMD 0.0 OHM JUMPER 1/2W 0805|R11|RES 0805/2012|5106|1
+26|500k|TRIMMER 500K OHM 0.15W SMD|R12|POT Panasonic EVM|EVM-3YSX50B55|1
+27|Ultimate Sensor Fusion Solution||U1|Ultimate Sensor Fusion Solution|Ultimate Sensor Fusion Solution|1
+28|LM2940IMP-9.0/NOPB||U2|SOT230P700X180-4N|LM2940IMP-9.0/NOPB|1
+29|#NAME?||U3|R-78Exx-1.0|R-78E3.3-1.0|1
+30|#NAME?||U4|PI34xx-00|PI3424-00-LGIZ|1

@@ -1,0 +1,28 @@
+Change Component Comment : Designator=P1 Old Comment=I2C Jumper New Comment=Header 3X2
+Change component parameters: Designator = "J10"; Footprint = "B2P-VH-FB-B"; UniqueID = "\XGAPMNXV"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.jst.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.jst-mfg.com/product/pdf/eng/eVH.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number Of Positions"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number Of Rows"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "B2P-VH-FB-B(LF)(SN)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "455-2947-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=J1-P2A
+Added Pin To Net: NetName=5V Pin=J1-P2A
+Added Pin To Net: NetName=5V Pin=J1-P2A
+Added Pin To Net: NetName=5V Pin=J1-P2A
+Added Pin To Net: NetName=5V Pin=J2-P2A
+Added Pin To Net: NetName=5V Pin=J2-P2A
+Added Pin To Net: NetName=5V Pin=J2-P2A
+Added Pin To Net: NetName=5V Pin=J2-P2A
+Added Pin To Net: NetName=5V Pin=J3-P2A
+Added Pin To Net: NetName=5V Pin=J3-P2A
+Added Pin To Net: NetName=5V Pin=J3-P2A
+Added Pin To Net: NetName=5V Pin=J3-P2A
+Added Pin To Net: NetName=5V Pin=J4-P2A
+Added Pin To Net: NetName=5V Pin=J4-P2A
+Added Pin To Net: NetName=5V Pin=J4-P2A
+Added Pin To Net: NetName=5V Pin=J4-P2A

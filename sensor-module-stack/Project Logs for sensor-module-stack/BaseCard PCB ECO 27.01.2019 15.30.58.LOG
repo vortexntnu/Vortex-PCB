@@ -1,0 +1,42 @@
+Added Component: Designator=J2(Header_14x2_RA)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.3m.com/3M/en_US/interconnect-us/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://multimedia.3m.com/mws/media/43897O/3mtmpinstriphdr-100-100x-100-929-series-ts0769.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Positions"; Value = "28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "929745-01-14-I"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "3M156384-28-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+12V Pin=J2-1
+Added Pin To Net: NetName=GND Pin=J2-2
+Added Pin To Net: NetName=SDA1 Pin=J2-3
+Added Pin To Net: NetName=SCL1 Pin=J2-4
+Added Pin To Net: NetName=SDA2 Pin=J2-5
+Added Pin To Net: NetName=SCL2 Pin=J2-6
+Added Pin To Net: NetName=THR0 Pin=J2-7
+Added Pin To Net: NetName=THR1 Pin=J2-8
+Added Pin To Net: NetName=THR2 Pin=J2-9
+Added Pin To Net: NetName=THR3 Pin=J2-10
+Added Pin To Net: NetName=THR4 Pin=J2-11
+Added Pin To Net: NetName=THR5 Pin=J2-12
+Added Pin To Net: NetName=THR6 Pin=J2-13
+Added Pin To Net: NetName=THR7 Pin=J2-14
+Added Pin To Net: NetName=+5V Pin=J2-15
+Added Pin To Net: NetName=+3V3 Pin=J2-16
+Added Pin To Net: NetName=PWM8 Pin=J2-17
+Added Pin To Net: NetName=PWM9 Pin=J2-18
+Added Pin To Net: NetName=Rx1 Pin=J2-19
+Added Pin To Net: NetName=Tx1 Pin=J2-20
+Added Pin To Net: NetName=Rx2 Pin=J2-21
+Added Pin To Net: NetName=Tx2 Pin=J2-22
+Added Pin To Net: NetName=GPIO0 Pin=J2-23
+Added Pin To Net: NetName=GPIO1 Pin=J2-24
+Added Pin To Net: NetName=GPIO2 Pin=J2-25
+Added Pin To Net: NetName=GPIO3 Pin=J2-26
+Added Pin To Net: NetName=GPIO4 Pin=J2-27
+Added Pin To Net: NetName=GPIO5 Pin=J2-28
+Added Member To Class: ClassName=BaseCard Member=Component J2 929745-01-14-I
+Added Room: Name=BaseCard
